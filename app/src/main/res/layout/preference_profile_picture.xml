@@ -40,7 +40,7 @@
             android:maxLines="10"
             android:textAlignment="viewStart"
             android:textColor="?android:attr/textColorSecondary"
-            tools:text="No picture selected" />
+            tools:text="没有选择图片" />
 
     </RelativeLayout>
 

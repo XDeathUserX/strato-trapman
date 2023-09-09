@@ -53,7 +53,7 @@ class ProfilePicturePreference @JvmOverloads constructor(context : Context, attr
                 if (File(profilePicture).exists()) {
                     File(profilePicture).delete()
                 }
-                PreferenceManager.getDefaultSharedPreferences(context).edit().putString(key, "No picture selected").apply()
+                PreferenceManager.getDefaultSharedPreferences(context).edit().putString(key, "没有选择图片").apply()
             }
             updatePreview()
             notifyChanged()
@@ -64,7 +64,7 @@ class ProfilePicturePreference @JvmOverloads constructor(context : Context, attr
 
     init {
         summaryProvider = SummaryProvider<ProfilePicturePreference> { preference ->
-            var relativePath = Uri.decode(preference.getPersistedString("No picture selected"))
+            var relativePath = Uri.decode(preference.getPersistedString("没有选择图片"))
             if (relativePath.startsWith(skylineFilesDir))
                 relativePath = relativePath.substring(skylineFilesDir.length)
             relativePath

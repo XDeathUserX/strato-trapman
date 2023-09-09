@@ -4,13 +4,13 @@
         android:key="category_system"
         android:title="@string/system">
         <SwitchPreferenceCompat
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:summaryOff="@string/handheld_enabled"
             android:summaryOn="@string/docked_enabled"
             app:key="is_docked"
             app:title="@string/use_docked" />
         <emu.skyline.preference.CustomEditTextPreference
-            android:defaultValue="@string/username_default"
+            android:defaultValue="非鱼厄"
             app:key="username_value"
             app:limit="31"
             app:title="@string/username" />
@@ -18,7 +18,7 @@
             app:key="profile_picture_value"
             app:title="@string/profile_picture" />
         <emu.skyline.preference.IntegerListPreference
-            android:defaultValue="1"
+            android:defaultValue="15"
             android:entries="@array/system_languages"
             android:entryValues="@array/system_languages_val"
             app:key="system_language"
@@ -26,7 +26,7 @@
             app:title="@string/system_language"
             app:useSimpleSummaryProvider="true" />
         <emu.skyline.preference.IntegerListPreference
-            android:defaultValue="-1"
+            android:defaultValue="5"
             android:entries="@array/system_region"
             android:entryValues="@array/system_region_val"
             app:key="system_region"
@@ -36,7 +36,7 @@
             android:defaultValue="false"
             android:summary="@string/internet"
             app:key="is_internet_enabled"
-            app:title="Enable Internet" />
+            app:title="启用互联网" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="category_presentation"
