@@ -207,6 +207,16 @@ namespace skyline::service::hid {
         Result IsVibrationPermitted(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response);
 
         /**
+         * @url https://switchbrew.org/wiki/HID_services#IsVibrationDeviceMounted
+         */
+        Result IsVibrationDeviceMounted(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response);
+
+        /**
+         * @url https://switchbrew.org/wiki/HID_services#ResetSevenSixAxisSensorTimestamp
+         */
+        Result ResetSevenSixAxisSensorTimestamp(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response);
+
+        /**
          * @brief Sets boost mode to a Palma device
          * @url https://switchbrew.org/wiki/HID_services#SetPalmaBoostMode
          */
@@ -246,6 +256,8 @@ namespace skyline::service::hid {
             SFUNC(0xC9, IHidServer, SendVibrationValue),
             SFUNC(0xCE, IHidServer, SendVibrationValues),
             SFUNC(0xCD, IHidServer, IsVibrationPermitted),
+            SFUNC(0xD3, IHidServer, IsVibrationDeviceMounted),
+            SFUNC(0x136, IHidServer, ResetSevenSixAxisSensorTimestamp),
             SFUNC(0x20D, IHidServer, SetPalmaBoostMode)
         )
     };
