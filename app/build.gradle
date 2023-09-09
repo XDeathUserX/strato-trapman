@@ -20,7 +20,7 @@ android {
     var isBuildSigned = (System.getenv("CI") == "true") && (System.getenv("IS_SKYLINE_SIGNED") == "true")
 
     defaultConfig {
-        applicationId "strato.fye.emu"
+        applicationId "skyline.emu"
 
         minSdk 29
         targetSdk 33
