@@ -47,9 +47,6 @@
 [submodule "Shader Compiler"]
 	path = app/libraries/shader-compiler
 	url = https://github.com/strato-emu/shader-compiler.git
-[submodule "libadrenotools"]
-	path = app/libraries/adrenotools
-	url = https://github.com/bylaws/libadrenotools.git
 [submodule "app/libraries/robin-map"]
 	path = app/libraries/robin-map
 	url = https://github.com/Tessil/robin-map
