@@ -25,20 +25,18 @@ namespace skyline::service::lbl {
 
     Result ILblController::SetCurrentBrightnessSettingForVrMode(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response) {
         auto brightnessSettingForVrMode{request.Pop<float>()};
-        if(!std::isfinite(brightnessSettingForVrMode)) {
+        if(!std::isfinite(brightnessSettingForVrMode))
             brightnessSettingForVrMode = 0.0f;
-        }
-
+		
         currentBrightnessSettingForVrMode = brightnessSettingForVrMode;
-
+		
         return {};
     }
 
     Result ILblController::GetCurrentBrightnessSettingForVrMode(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response) {
-        auto brightnessSettingForVrMode = currentBrightnessSettingForVrMode;
-        if(!std::isfinite(brightnessSettingForVrMode)) {
+        auto brightnessSettingForVrMode{currentBrightnessSettingForVrMode};
+        if (!std::isfinite(brightnessSettingForVrMode))
             brightnessSettingForVrMode = 0.0f;
-        }
 
         response.Push<float>(brightnessSettingForVrMode);
 
