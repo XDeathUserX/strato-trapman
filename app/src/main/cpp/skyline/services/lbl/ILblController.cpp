@@ -27,9 +27,9 @@ namespace skyline::service::lbl {
         auto brightnessSettingForVrMode{request.Pop<float>()};
         if(!std::isfinite(brightnessSettingForVrMode))
             brightnessSettingForVrMode = 0.0f;
-		
+
         currentBrightnessSettingForVrMode = brightnessSettingForVrMode;
-		
+
         return {};
     }
 

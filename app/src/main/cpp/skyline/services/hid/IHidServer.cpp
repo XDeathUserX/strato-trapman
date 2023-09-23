@@ -305,7 +305,6 @@ namespace skyline::service::hid {
         return {};
     }
 
-
     Result IHidServer::ResetSevenSixAxisSensorTimestamp(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response) {
         auto appletResourceUserId{request.Pop<u64>()};
         return {};

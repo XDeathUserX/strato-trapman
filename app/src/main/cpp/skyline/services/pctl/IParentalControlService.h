@@ -24,7 +24,6 @@ namespace skyline::service::pctl {
 
         Result IsStereoVisionPermittedImpl();
 
-
       public:
         IParentalControlService(const DeviceState &state, ServiceManager &manager);
 

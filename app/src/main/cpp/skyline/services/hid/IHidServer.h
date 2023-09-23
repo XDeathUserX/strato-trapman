@@ -212,7 +212,6 @@ namespace skyline::service::hid {
         Result IsVibrationDeviceMounted(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response);
 
         /**
-
          * @url https://switchbrew.org/wiki/HID_services#ActivateConsoleSixAxisSensor
          */
         Result ActivateConsoleSixAxisSensor(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response);
@@ -223,7 +222,6 @@ namespace skyline::service::hid {
         Result InitializeSevenSixAxisSensor(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response);
 
         /**
-
          * @url https://switchbrew.org/wiki/HID_services#ResetSevenSixAxisSensorTimestamp
          */
         Result ResetSevenSixAxisSensorTimestamp(type::KSession &session, ipc::IpcRequest &request, ipc::IpcResponse &response);
