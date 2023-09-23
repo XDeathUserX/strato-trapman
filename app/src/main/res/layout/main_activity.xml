@@ -126,20 +126,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <androidx.cardview.widget.CardView 
-            android:orientation="vertical" 
-            android:id="@id/cardview1" 
-            android:padding="8.0dip" 
-            android:layout_width="fill_parent" 
-            android:layout_height="fill_parent" 
-            app:cardCornerRadius="30.0dip" 
-            app:cardElevation="30.0dip">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/app_list"
             android:layout_width="match_parent"
@@ -147,6 +138,5 @@
             android:clipToPadding="false"
             android:overScrollMode="ifContentScrolls"
             android:paddingBottom="20dp" />
-            </androidx.cardview.widget.CardView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
