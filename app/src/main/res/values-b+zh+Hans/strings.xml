@@ -83,6 +83,7 @@
     <string name="docked_enabled">正在使用主机模式</string>
     <string name="username">用户名</string>
     <string name="profile_picture">头像</string>
+    <string name="profile_picture_not_selected">没有选择图片</string>
     <string name="system_language">系统语言</string>
     <string name="system_region">系统区域</string>
     <!-- Settings - Display -->
