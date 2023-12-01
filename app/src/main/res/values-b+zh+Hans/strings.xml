@@ -18,11 +18,15 @@
     <string name="no_rom">找不到任何ROM</string>
     <string name="pin">按住</string>
     <string name="play">开始</string>
+    <string name="import_save">导入</string>
+    <string name="export_save">导出</string>
     <string name="searching_roms">查找ROM</string>
     <string name="invalid_file">无效的文件</string>
     <string name="missing_title_key">缺少title prod密钥</string>
     <string name="incomplete_prod_keys">密钥不完整</string>
     <!-- Settings - Content -->
+    <string name="pause">暂停</string>
+    <string name="mute">静音</string>
     <string name="content">内容</string>
     <string name="open_data_directory">查看内部目录</string>
     <string name="open_data_directory_summary">在文件管理器中打开 Skyline 的内部目录</string>
@@ -30,16 +34,26 @@
     <string name="search_location">搜索位置</string>
     <!-- Settings - Keys -->
     <string name="keys">Keys文件</string>
-    <string name="prod_keys">Production Keys</string>
-    <string name="title_keys">Title Keys</string>
+    <string name="prod_keys">Production Keys(导入prod.keys文件)</string>
+    <string name="title_keys">Title Keys(导入title.keys文件)</string>
     <string name="import_keys_success">成功导入Keys文件</string>
     <string name="import_keys_invalid_input_path">提供的密钥路径无效</string>
     <string name="import_keys_invalid_keys">您尝试导入的密钥无效</string>
     <string name="import_keys_delete_previous_failed">无法删除当前安装的密钥</string>
     <string name="import_keys_move_failed">无法将密钥移动到当前目录</string>
     <!-- Settings - Appearance -->
+    <string name="firmware">固件</string>
+    <string name="import_firmware_in_progress">安装固件</string>
+    <string name="import_firmware_success">固件安装成功</string>
+    <string name="import_firmware_failure">固件安装失败</string>
+    <string name="import_firmware_invalid_contents">提供的固件包不包含有效的固件</string>
+    <string name="firmware_keys_needed">固件安装需要有效的密钥</string>
+    <string name="firmware_not_installed">没有安装固件</string>
     <string name="appearance">外观</string>
     <string name="theme">主题</string>
+    <string name="use_material_you">使用配色</string>
+    <string name="use_material_you_desc_off">将使用天际线的配色</string>
+    <string name="use_material_you_desc_on">将使用自定义的颜色</string>
     <string name="app_language">应用语言</string>
     <string name="app_language_default">使用系统默认值</string>
     <string name="layout_type">游戏显示布局</string>
@@ -48,10 +62,14 @@
     <string name="select_action_desc_on">游戏信息将在点击游戏时显示</string>
     <string name="select_action_desc_off">游戏信息只会在长按游戏时显示</string>
     <!-- Settings - Game -->
+    <string name="filter_invalid_files_desc_off">显示已解析为无效的文件</string>
+    <string name="filter_invalid_files_desc_on">隐藏已解析为无效的文件</string>
     <string name="game">游戏</string>
     <string name="use_custom_settings">启用自定义设置</string>
     <string name="use_custom_settings_desc_on">此游戏的自定义设置已启用</string>
     <string name="use_custom_settings_desc_off">此游戏的自定义设置已禁用</string>
+    <string name="export_custom_settings">将自定义设置导出为文本</string>
+    <string name="export_custom_settings_desc">复制具有当前设置的文本以在线共享</string>
     <string name="reset_custom_settings">重置自定义设置</string>
     <string name="reset_custom_settings_desc">将自定义设置重置为默认值</string>
     <string name="reset_settings_warning">您确定要将所有设置重置为默认值？<b>当前设置将会丢失</b></string>
@@ -65,9 +83,11 @@
     <string name="docked_enabled">正在使用主机模式</string>
     <string name="username">用户名</string>
     <string name="profile_picture">头像</string>
+    <string name="profile_picture_not_selected">没有选择图片</string>
     <string name="system_language">系统语言</string>
     <string name="system_region">系统区域</string>
     <!-- Settings - Display -->
+    <string name="internet">该系统将能够使用互联网</string>
     <string name="display">显示</string>
     <string name="perf_stats">显示帧数信息</string>
     <string name="perf_stats_desc_off">不会显示性能统计信息</string>
@@ -81,6 +101,12 @@
     <string name="respect_display_cutout_enabled">不要在切口区域绘制 UI 元素</string>
     <string name="respect_display_cutout_disabled">允许在剪裁区域中绘制 UI 元素</string>
     <!-- Settings - Audio -->
+    <string name="enable_foldable_layout">启用可折叠布局</string>
+    <string name="enable_foldable_layout_enabled">折叠后的设备将分别显示游戏和控制器</string>
+    <string name="enable_foldable_layout_disabled">在游戏中显示控制器，即使设备被折叠</string>
+    <string name="show_pause_button">显示暂停按钮</string>
+    <string name="show_pause_button_disabled">将隐藏暂停按钮</string>
+    <string name="show_pause_button_enabled">将显示暂停按钮</string>
     <string name="audio">音频</string>
     <string name="disable_audio_output">禁用音频输出</string>
     <string name="disable_audio_output_enabled">音频输出被禁用</string>
@@ -105,6 +131,8 @@
     <string name="force_max_gpu_clocks">强制最大 GPU 时钟</string>
     <string name="force_max_gpu_clocks_desc">强制 GPU 以最大可能时钟速度运行（可能导致过热和耗电）</string>
     <string name="force_max_gpu_clocks_desc_unsupported">您的设备不支持强制最大 GPU 时钟</string>
+    <string name="free_guest_texture_memory">自动空闲的纹理内存</string>
+    <string name="free_guest_texture_memory_desc">允许客户纹理数据在不需要时从内存中释放(很少会导致崩溃)</string>
     <string name="shader_cache">禁用着色器缓存</string>
     <string name="shader_cache_disabled">缓存的着色器不会被加载，会导致卡顿</string>
     <string name="shader_cache_enabled">缓存的着色器将被加载，可以大大减少卡顿</string>
@@ -148,12 +176,27 @@
     <string name="osc_feedback">启用触屏震动开关</string>
     <string name="osc_feedback_description">不包括摇杆和硬件控制</string>
     <string name="osc_edit">修改屏幕按键布局</string>
+    <string name="osc_text_color">文本颜色</string>
+    <string name="osc_background_color">背景颜色</string>
+    <string name="osc_reset">重置按钮: %1$s</string>
+    <string name="osc_reset_confirm">您确定要重置这个按钮吗?</string>
+    <string name="osc_toggle_mode">切换模式</string>
+    <string name="osc_current_button">当前按钮: %1$s</string>
+    <string name="select_all">全选</string>
+    <string name="osc_scale">缩放</string>
+    <string name="osc_opacity">透明度</string>
+    <string name="osc_activation_radius">激活半径</string>
+    <string name="button_color">按钮颜色</string>
+    <string name="toggle_grid">网格线开关</string>
     <string name="setup_guide">设置指南</string>
     <string name="setup_guide_description">依次设置每个摇杆和按键</string>
     <string name="joystick">摇杆</string>
     <string name="confirm">确认</string>
     <string name="cancel">取消</string>
     <string name="osc_recenter_sticks">虚拟摇杆跟随</string>
+    <string name="osc_recenter_sticks_desc">当它们被触摸时，重新定位在按下的位置</string>
+    <string name="osc_use_stick_regions">使用半屏摇杆区域</string>
+    <string name="osc_use_stick_regions_desc">将摇杆的激活区域扩展为覆盖屏幕相应一半的矩形</string>
     <string name="controller">控制器</string>
     <string name="config_controller">配置控制器</string>
     <string name="controller_type">控制器类型</string>
@@ -205,6 +248,8 @@
     <string name="dpad">十字键</string>
     <string name="left_stick">左摇杆</string>
     <string name="right_stick">右摇杆</string>
+    <string name="left_stick_button">左摇杆键</string>
+    <string name="right_stick_button">右摇杆键</string>
     <string name="face_buttons">功能按键</string>
     <string name="shoulder_trigger">肩鍵和扳机鍵</string>
     <string name="shoulder_rail">Joy-Con手柄上的L/R键</string>
@@ -243,6 +288,24 @@
     <string name="input_hint">输入文字</string>
     <!-- Misc -->
     <!--suppress AndroidLintUnusedResources -->
+    <string name="compiling_cached_pipelines">编译着色器缓存管道…</string>
     <string name="expand_button_title" tools:override="true">展开</string>
     <string name="undo">撤销</string>
+    <string name="enabled">启用</string>
+    <string name="save_management">存档管理</string>
+    <string name="delete_save">删除存档</string>
+    <string name="per_game_settings_active_message">单前自定义游戏设置是启动的</string>
+    <string name="save_data_manager">管理存档数据</string>
+    <string name="save_data_found">找到了存档数据。你想做什么?</string>
+    <string name="save_data_not_found">没有找到存档数据。你想做什么?</string>
+    <string name="delete_save_confirmation_message">您确定要删除此存档吗?</string>
+    <string name="action_irreversible">这种行为是不可逆转的。</string>
+    <string name="yes">是</string>
+    <string name="no">不</string>
+    <string name="save_file_imported_ok">日志含义成功导入存档文件</string>
+    <string name="save_file_invalid_zip_structure">无效的Zip目录结构:第一个子文件夹名称必须是游戏的Title ID。</string>
+    <string name="save_file_share">共享存档文件</string>
+    <string name="global_save_data_zip_name">Strato存档数据</string>
+    <string name="game_crash">游戏崩溃了</string>
+    <string name="game_crash_message">发生致命错误。详细信息请查看日志。</string>
 </resources>

@@ -42,21 +42,27 @@ class ExportCustomSettingsPreference @JvmOverloads constructor(context : Context
             val hackFastReadbackWrite = emulationSettings.enableFastReadbackWrites;
             val hackDisableSubgroupShuffle = emulationSettings.disableSubgroupShuffle;
 
+            var hh="$gpuDriver";
+
+            if(hh=="system"){
+                hh="系统驱动";
+            }
+
             val settingsAsText = String.format(
                 """
-                SYSTEM
-                - Docked: $systemIsDocked
+                系统
+                - 主机模式: $systemIsDocked
                 
                 GPU
-                - Driver: $gpuDriver
-                - Executors: $gpuExecSlotCount slots (threshold: $gpuExecFlushThreshold)
-                - Triple buffering: $gpuTripleBuffering, DMI: $gpuDMI
-                - Max clocks: $gpuForceMaxGpuClocks, free guest texture memory: $gpuFreeGuestTextureMemory
-                - Disable shader cache: $gpuDisableShaderCache
+                - 驱动: $hh
+                - 执行器 : $gpuExecSlotCount 插槽 (刷新阈值: $gpuExecFlushThreshold)
+                - 三重缓冲: $gpuTripleBuffering, 直接内存: $gpuDMI
+                - 最大GPU时钟: $gpuForceMaxGpuClocks, 清理空闲纹理内存: $gpuFreeGuestTextureMemory
+                - 禁用着色器缓存: $gpuDisableShaderCache
                 
-                HACKS
-                - Fast GPU readback: $hackFastGpuReadback, fast readback writes $hackFastReadbackWrite
-                - Disable GPU subgroup shuffle: $hackDisableSubgroupShuffle
+                黑客
+                - 快速GPU回读: $hackFastGpuReadback, 快速回读写入 $hackFastReadbackWrite
+                - 禁用GPU子组随机播放: $hackDisableSubgroupShuffle
                 """.trimIndent().replace("true", "✔").replace("false", "✖")
             )
 
