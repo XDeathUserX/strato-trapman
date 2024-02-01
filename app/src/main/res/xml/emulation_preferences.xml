@@ -9,24 +9,24 @@
             android:summaryOn="@string/docked_enabled"
             app:key="is_docked"
             app:title="@string/use_docked" />
-        <emu.skyline.preference.CustomEditTextPreference
-            android:defaultValue="非鱼厄"
+        <org.stratoemu.strato.preference.CustomEditTextPreference
+            android:defaultValue="@string/username_default"
             app:key="username_value"
             app:limit="31"
             app:title="@string/username" />
-        <emu.skyline.preference.ProfilePicturePreference
+        <org.stratoemu.strato.preference.ProfilePicturePreference
             app:key="profile_picture_value"
             app:title="@string/profile_picture" />
-        <emu.skyline.preference.IntegerListPreference
-            android:defaultValue="15"
+        <org.stratoemu.strato.preference.IntegerListPreference
+            android:defaultValue="1"
             android:entries="@array/system_languages"
             android:entryValues="@array/system_languages_val"
             app:key="system_language"
             app:refreshRequired="true"
             app:title="@string/system_language"
             app:useSimpleSummaryProvider="true" />
-        <emu.skyline.preference.IntegerListPreference
-            android:defaultValue="5"
+        <org.stratoemu.strato.preference.IntegerListPreference
+            android:defaultValue="-1"
             android:entries="@array/system_region"
             android:entryValues="@array/system_region_val"
             app:key="system_region"
@@ -53,14 +53,14 @@
             android:summaryOn="@string/max_refresh_rate_enabled"
             app:key="max_refresh_rate"
             app:title="@string/max_refresh_rate" />
-        <emu.skyline.preference.IntegerListPreference
+        <org.stratoemu.strato.preference.IntegerListPreference
             android:defaultValue="6"
             android:entries="@array/orientation_entries"
             android:entryValues="@array/orientation_values"
             app:key="orientation"
             app:title="@string/screen_orientation"
             app:useSimpleSummaryProvider="true" />
-        <emu.skyline.preference.IntegerListPreference
+        <org.stratoemu.strato.preference.IntegerListPreference
             android:defaultValue="0"
             android:entries="@array/aspect_ratios"
             app:key="aspect_ratio"
@@ -99,7 +99,7 @@
     <PreferenceCategory
         android:key="category_gpu"
         android:title="@string/gpu">
-        <emu.skyline.preference.GpuDriverPreference
+        <org.stratoemu.strato.preference.GpuDriverPreference
             app:key="gpu_driver"
             app:title="@string/gpu_driver_config" />
         <SwitchPreferenceCompat
@@ -179,7 +179,7 @@
     <PreferenceCategory
         android:key="category_debug"
         android:title="@string/debug">
-        <emu.skyline.preference.IntegerListPreference
+        <org.stratoemu.strato.preference.IntegerListPreference
             android:defaultValue="2"
             android:entries="@array/log_level"
             app:key="log_level"
