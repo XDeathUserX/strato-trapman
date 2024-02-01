@@ -34,10 +34,6 @@
 [submodule "Boost"]
 	path = app/libraries/boost
 	url = https://github.com/strato-emu/boost.git
-[submodule "LLVM"]
-	path = app/libraries/llvm
-	url = https://github.com/llvm/llvm-project.git
-	shallow = true
 [submodule "C++ Range v3"]
 	path = app/libraries/range
 	url = https://github.com/ericniebler/range-v3
@@ -47,6 +43,9 @@
 [submodule "Shader Compiler"]
 	path = app/libraries/shader-compiler
 	url = https://github.com/strato-emu/shader-compiler.git
+[submodule "libadrenotools"]
+	path = app/libraries/adrenotools
+	url = https://github.com/bylaws/libadrenotools/
 [submodule "app/libraries/robin-map"]
 	path = app/libraries/robin-map
 	url = https://github.com/Tessil/robin-map
@@ -59,6 +58,6 @@
 [submodule "app/libraries/audio-core"]
 	path = app/libraries/audio-core
 	url = https://github.com/skyline-emu/audio-core
-[submodule "app/libraries/adrenotools"]
-	path = app/libraries/adrenotools
-	url = https://github.com/bylaws/libadrenotools.git
+[submodule "Dynarmic"]
+	path = app/libraries/dynarmic
+	url = https://github.com/strato-emu/dynarmic.git
