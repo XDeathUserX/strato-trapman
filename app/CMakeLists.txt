@@ -147,6 +147,7 @@ add_library(skyline SHARED
         ${source_DIR}/skyline/common/spin_lock.cpp
         ${source_DIR}/skyline/common/uuid.cpp
         ${source_DIR}/skyline/common/trace.cpp
+        ${source_DIR}/skyline/common/trap_manager.cpp
         ${source_DIR}/skyline/logger/logger.cpp
         ${source_DIR}/skyline/jit/jit32.cpp
         ${source_DIR}/skyline/cpu.cpp

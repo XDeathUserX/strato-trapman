@@ -17,7 +17,9 @@ namespace skyline::kernel::type {
         return memory + (constant::TlsSlotSize * index++);
     }
 
-    KProcess::KProcess(const DeviceState &state) : memory(state), KSyncObject(state, KType::KProcess) {}
+    KProcess::KProcess(const DeviceState &state) : memory(state), KSyncObject(state, KType::KProcess) {
+        trap.InstallStaticInstance();
+    }
 
     KProcess::~KProcess() {
         std::scoped_lock guard{threadMutex};
@@ -70,7 +72,7 @@ namespace skyline::kernel::type {
         while (state.process->memory.tlsIo.guest.contains(span<u8>(pageCandidate, constant::PageSize))) {
             auto chunk = memory.GetChunk(pageCandidate);
             if (!chunk)
-                continue;
+                break;
 
             if (chunk->second.state == memory::states::Unmapped) {
                 memory.MapThreadLocalMemory(span<u8>{pageCandidate, constant::PageSize});
@@ -81,7 +83,7 @@ namespace skyline::kernel::type {
             }
         }
 
-        if (!isAllocated) [[unlikely]]
+        if (!isAllocated)
             throw exception("Failed to find free memory for a tls slot!");
 
         auto tlsPage{std::make_shared<TlsPage>(pageCandidate)};
@@ -100,7 +102,7 @@ namespace skyline::kernel::type {
             while (state.process->memory.stack.guest.contains(span<u8>(pageCandidate, state.process->npdm.meta.mainThreadStackSize))) {
                 auto chunk{memory.GetChunk(pageCandidate)};
                 if (!chunk)
-                    continue;
+                    break;
 
                 if (chunk->second.state == memory::states::Unmapped && chunk->second.size >= state.process->npdm.meta.mainThreadStackSize) {
                     memory.MapStackMemory(span<u8>{pageCandidate, state.process->npdm.meta.mainThreadStackSize});
@@ -111,7 +113,7 @@ namespace skyline::kernel::type {
                 }
             }
 
-            if (!isAllocated) [[unlikely]]
+            if (!isAllocated)
                 throw exception("Failed to map main thread stack!");
 
             stackTop = pageCandidate + state.process->npdm.meta.mainThreadStackSize;
