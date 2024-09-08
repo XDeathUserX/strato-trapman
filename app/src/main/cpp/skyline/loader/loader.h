@@ -5,7 +5,6 @@
 
 #include <linux/elf.h>
 #include <vfs/nacp.h>
-#include <vfs/cnmt.h>
 #include <vfs/nca.h>
 #include <common/signal.h>
 #include "executable.h"
