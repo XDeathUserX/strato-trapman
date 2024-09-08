@@ -15,7 +15,7 @@ on:
     - cron: "0 0 */5 * *"
 
 jobs:
-  strato_jit_build:
+  strato_trapman_build:
     permissions:
       contents: write
     runs-on: ubuntu-latest
