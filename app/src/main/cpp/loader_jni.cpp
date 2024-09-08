@@ -74,14 +74,6 @@ extern "C" JNIEXPORT jint JNICALL Java_org_stratoemu_strato_loader_RomFile_popul
         env->SetObjectField(thiz, rawIconField, iconByteArray);
     }
 
-    if (loader->cnmt) {
-        auto contentMetaType{loader->cnmt->GetContentMetaType()};
-        env->SetIntField(thiz, romType, static_cast<skyline::u8>(contentMetaType));
-
-        if (contentMetaType != skyline::vfs::ContentMetaType::Application)
-            env->SetObjectField(thiz, parentTitleId, env->NewStringUTF(loader->cnmt->GetParentTitleId().c_str()));
-    }
-
     return static_cast<jint>(skyline::loader::LoaderResult::Success);
 }
 
