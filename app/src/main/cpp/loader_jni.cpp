@@ -5,7 +5,6 @@
 #include "skyline/vfs/nca.h"
 #include "skyline/vfs/os_backing.h"
 #include "skyline/vfs/os_filesystem.h"
-#include "skyline/vfs/cnmt.h"
 #include "skyline/loader/nro.h"
 #include "skyline/loader/nso.h"
 #include "skyline/loader/nca.h"
